@@ -11,20 +11,21 @@ Gem::Specification.new do |s|
   s.authors = ["Kyle Maxwell"]
   s.date = %q{2011-04-11}
   s.default_executable = %q{slow}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{A TCP reverse proxy that responds slowly}
   s.email = %q{kmaxwell@twitter.com}
   s.executables = ["slow"]
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README"
   ]
   s.files = [
     ".document",
      ".gitignore",
      "LICENSE",
-     "README.rdoc",
+     "README",
      "Rakefile",
      "bin/slow",
+     "slow.gemspec",
      "test/helper.rb",
      "test/test_slow.rb"
   ]
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{A TCP reverse proxy that responds slowly}
   s.test_files = [
     "test/helper.rb",
      "test/test_slow.rb"
