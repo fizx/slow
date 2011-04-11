@@ -1,1 +1,3 @@
+A TCP reverse proxy that responds slowly
+
 Usage: ./bin/slow DELAY_SECONDS LOCAL_PORT HOST:PORT
