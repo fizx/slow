@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "em-proxy"
+
+if ARGV.length != 3
+  puts "Usage: #{$0} DELAY_SECONDS LOCAL_PORT HOST:PORT"
+  exit 1
+end
+
+delay, port, remote = ARGV
+delay = delay.to_f
+remote_host, remote_port = remote.split(":")
+
+Proxy.start(:host => "0.0.0.0", :port => port.to_i, :debug => true) do |conn|
+  conn.server :remote, :host => remote_host, :port => remote_port.to_i
+   
+  # modify / process request stream
+  conn.on_data do |data|
+    data
+  end
+
+  # modify / process response stream
+  conn.on_response do |backend, resp|
+    EM.add_timer(delay) {
+      send_data(resp)
+    }    
+  end
+
+  # termination logic
+  conn.on_finish do |backend, name|
+    unbind
+  end
+end

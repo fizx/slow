@@ -10,6 +10,7 @@ begin
     gem.email = "kmaxwell@twitter.com"
     gem.homepage = "http://github.com/fizx/slow"
     gem.authors = ["Kyle Maxwell"]
+    gem.add_dependency "em-proxy", ">= 0.1.5"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
