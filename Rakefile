@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "slow"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A TCP reverse proxy that responds slowly}
+    gem.description = %Q{A TCP reverse proxy that responds slowly}
     gem.email = "kmaxwell@twitter.com"
     gem.homepage = "http://github.com/fizx/slow"
     gem.authors = ["Kyle Maxwell"]
